@@ -1,9 +1,9 @@
 /** 
  * @file	task1.cpp
- * @brief	C++ source of the app that ...
+ * @brief	C++ source of the app that detects two frequencies in a data stream
  *
  * 
- * Copyright 2014 by mnxoid,
+ * Copyright 2015 by mnxoid,
  * 
  * This software is the confidential and proprietary information
  * of mnxoid ("Confidential Information").  You
@@ -12,7 +12,8 @@
  * you entered into with mnxoid.
  **/
 //------------------Includes------------------------------------
-#include "util.h"
+//#include "util.h"//Unused, just for CleanInput()
+#include <iostream>
 #include <fstream>
 #include <string>
 //------------------Namespaces----------------------------------
