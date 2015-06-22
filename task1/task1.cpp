@@ -20,8 +20,8 @@
 using namespace std;
 //------------------Utilty function definitions-----------------
 /**
- * A function that converts wavelength (us) into frequency string(Hz)
- * @param  	   int len - wave length
+ * A function that converts half wave period (us) into frequency string(Hz)
+ * @param  	   int len - half wave period
  * @return     string - frequency string
  */
 string freq(int len);
@@ -67,11 +67,11 @@ int main()
 		}
 		prev=curr;//save input for comparsion
 	}
-	if(found[0]&&found[1])
+	if(found[0]&&found[1])//both frequencies found
 	{
 		cout << "First frequency :" << freq(len[0]) << endl;
 		cout << "Second frequency :" << freq(len[1]) << endl;
-	} else {
+	} else {//bad input
 		cout << "Error, not enough information" << endl;
 	}
 	//CleanInput();//wait for <ENTER>
@@ -80,9 +80,7 @@ int main()
 //------------------Utility functions---------------------------
 string freq(int len)
 {
-	string res = "";
-	double fr=1000/((double)len*2);
-	res += to_string(fr);
+	string res = to_string(1000/((double)len*2)); //conversion
 	res += "KHz";
 	return res;
 }
